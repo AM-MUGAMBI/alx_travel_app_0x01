@@ -1,21 +1,28 @@
-# ALX Travel App 0x00
+# alx_travel_app_0x01
 
-## Overview
+## API for Travel Listings and Bookings
 
-This project is a basic travel listing and booking platform built with Django. It includes:
+### Features
 
-- Listings for travel accommodations
-- Booking system
-- User reviews
+- CRUD API for Listings and Bookings
+- RESTful routes under `/api/`
+- Swagger documentation at `/swagger/`
 
-## Setup Instructions
+### Endpoints
+
+| Method | Endpoint           | Description         |
+|--------|--------------------|---------------------|
+| GET    | /api/listings/     | List all listings   |
+| POST   | /api/listings/     | Create new listing  |
+| PUT    | /api/listings/{id}/| Update listing      |
+| DELETE | /api/listings/{id}/| Delete listing      |
+| ...    | /api/bookings/...  | Booking operations  |
+
+### Setup
 
 ```bash
-git clone https://github.com/YOUR_USERNAME/alx_travel_app_0x00.git
-cd alx_travel_app_0x00
-python3 -m venv venv
-source venv/bin/activate
+git clone https://github.com/YOUR_USERNAME/alx_travel_app_0x01.git
+cd alx_travel_app_0x01
 pip install -r requirements.txt
 python manage.py migrate
-python manage.py seed
-
+python manage.py runserver
