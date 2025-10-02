@@ -1,5 +1,3 @@
-# alx_travel_app/urls.py
-
 from django.contrib import admin
 from django.urls import path, include
 from rest_framework import permissions
@@ -18,6 +16,6 @@ schema_view = get_schema_view(
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', include('listings.urls')),
+    path('api/', include('listings.urls')),  # ✅ FIXED: add 'api/' here
     path('swagger/', schema_view.with_ui('swagger', cache_timeout=0), name='schema-swagger-ui'),
 ]
